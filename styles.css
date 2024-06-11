@@ -1,0 +1,1171 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap");
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+  --header-height: 3.5rem;
+
+  /*========== Colors ==========*/
+  /*Color mode HSL(hue, saturation, lightness)*/
+  --black-color: hsl(220, 24%, 12%);
+  --black-color-light: hsl(220, 24%, 15%);
+  --black-color-lighten: hsl(220, 20%, 18%);
+  --white-color: #fff;
+  --body-color: hsl(220, 100%, 97%);
+
+  /*========== Font and typography ==========*/
+  /*.5rem = 8px | 1rem = 16px ...*/
+  --body-font: "Montserrat", sans-serif;
+  --normal-font-size: .938rem;
+
+  /*========== Font weight ==========*/
+  --font-regular: 400;
+  --font-semi-bold: 600;
+
+  /*========== z index ==========*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
+}
+
+/*========== Responsive typography ==========*/
+@media screen and (min-width: 1024px) {
+  :root {
+    --normal-font-size: 1rem;
+  }
+}
+
+/*=============== BASE ===============*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  
+}
+
+ul {
+  list-style: none;
+  /* Color highlighting when pressed on mobile devices */
+  /*-webkit-tap-highlight-color: transparent;*/
+}
+
+a {
+  text-decoration: none;
+}
+
+/*=============== REUSABLE CSS CLASSES ===============*/
+.container {
+  max-width: 1120px;
+  margin-inline: 1.5rem;
+}
+
+/*=============== HEADER ===============*/
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color:#fff;
+  box-shadow: 0 2px 16px hsla(220, 32%, 8%, .3);
+  z-index: var(--z-fixed);
+}
+
+/*=============== NAV ===============*/
+.nav {
+  height: var(--header-height);
+}
+
+.nav__logo, 
+.nav__burger, 
+.nav__close {
+  color: black;
+}
+
+.nav__data {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav__logo {
+  display: inline-flex;
+  align-items: center;
+  column-gap: .25rem;
+  font-weight: var(--font-semi-bold);
+  /* Color highlighting when pressed on mobile devices */
+  /*-webkit-tap-highlight-color: transparent;*/
+}
+
+.nav__logo i {
+  font-weight: initial;
+  font-size: 1.25rem;
+}
+
+.nav__toggle {
+  position: relative;
+  width: 32px;
+  height: 32px;
+}
+
+.nav__burger, 
+.nav__close {
+  position: absolute;
+  width: max-content;
+  height: max-content;
+  inset: 0;
+  margin: auto;
+  font-size: 1.25rem;
+  cursor: pointer;
+  transition: opacity .1s, transform .4s;
+}
+
+.nav__close {
+  opacity: 0;
+}
+
+/* Navigation for mobile devices */
+@media screen and (max-width: 1118px) {
+  .nav__menu {
+    position: absolute;
+    left: 0;
+    top: 2.5rem;
+    width: 100%;
+    height: calc(100vh - 3.5rem);
+    overflow: auto;
+    pointer-events: none;
+    opacity: 0;
+    transition: top .4s, opacity .3s;
+  }
+  .nav__menu::-webkit-scrollbar {
+    width: 0;
+  }
+  .nav__list {
+    background-color:#fff;
+    padding-top: 1rem;
+  }
+}
+
+.nav__link {
+  color: black;
+  background-color: #fff;
+  font-weight: var(--font-semi-bold);
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color .3s;
+}
+
+.nav__link:hover {
+  background-color: white;
+}
+
+/* Show menu */
+.show-menu {
+  opacity: 1;
+  top: 3.5rem;
+  pointer-events: initial;
+}
+.nav__logo img {
+  filter: invert(35%) sepia(98%) saturate(1153%) hue-rotate(185deg) brightness(96%) contrast(91%);
+}
+
+
+/* Show icon */
+.show-icon .nav__burger {
+  opacity: 0;
+  transform: rotate(90deg);
+}
+.show-icon .nav__close {
+  opacity: 1;
+  transform: rotate(90deg);
+}
+
+/*=============== DROPDOWN ===============*/
+.dropdown__item {
+  cursor: pointer;
+}
+
+.dropdown__arrow {
+  font-size: 1.25rem;
+  font-weight: initial;
+  transition: transform .4s;
+}
+
+.dropdown__link, 
+.dropdown__sublink {
+  padding: 1.25rem 1.25rem 1.25rem 2.5rem;
+  color: black;
+  background-color:white;
+  display: flex;
+  align-items: center;
+  column-gap: .5rem;
+  font-weight: var(--font-semi-bold);
+  transition: background-color .3s;
+}
+
+.dropdown__link i, 
+.dropdown__sublink i {
+  font-size: 1.25rem;
+  font-weight: initial;
+  
+
+}
+/* Increase specificity */
+
+
+
+
+.dropdown__link:hover, 
+.dropdown__sublink:hover {
+  background-color: #007BFF;
+  color: #fff;
+  
+}
+
+.dropdown__menu, 
+.dropdown__submenu {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height .4s ease-out;
+  
+}
+.dropdown__submenu .dropdown__sublink{
+  background-color: #fff;
+}
+.dropdown__submenu .dropdown__sublink:hover{
+  background-color: #007BFF;
+  color: #fff;
+}
+
+/* Show dropdown menu & submenu */
+.dropdown__item:hover .dropdown__menu, 
+.dropdown__subitem:hover > .dropdown__submenu {
+  max-height: 1000px;
+  transition: max-height .4s ease-in;
+  
+  
+}
+
+/* Rotate dropdown icon */
+.dropdown__item:hover .dropdown__arrow {
+  transform: rotate(180deg);
+}
+
+/*=============== DROPDOWN SUBMENU ===============*/
+.dropdown__add {
+  margin-left: auto;
+}
+
+.dropdown__sublink {
+  background-color: var(--black-color-lighten);
+}
+
+/*=============== BREAKPOINTS ===============*/
+/* For small devices */
+@media screen and (max-width: 340px) {
+  .container {
+    margin-inline: 1rem;
+  }
+
+  .nav__link {
+    padding-inline: 1rem;
+  }
+}
+
+/* For large devices */
+@media screen and (min-width: 1118px) {
+  .container {
+    margin-inline: auto;
+  }
+
+  .nav {
+    height: calc(var(--header-height) + 2rem);
+    display: flex;
+    justify-content: space-between;
+  }
+  .nav__toggle {
+    display: none;
+  }
+  .nav__list {
+    height: 100%;
+    display: flex;
+    column-gap: 3rem;
+  }
+  .nav__link {
+    height: 100%;
+    padding: 0;
+    justify-content: initial;
+    column-gap: .25rem;
+  }
+  .nav__link:hover {
+    background-color: transparent;
+  }
+
+  .dropdown__item, 
+  .dropdown__subitem {
+    position: relative;
+  }
+
+  .dropdown__menu, 
+  .dropdown__submenu {
+    max-height: initial;
+    overflow: initial;
+    position: absolute;
+    left: 0;
+    top: 6rem;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .3s, top .3s;
+  }
+
+  .dropdown__link, 
+  .dropdown__sublink {
+    padding-inline: 1rem 3.5rem;
+  }
+
+  .dropdown__subitem .dropdown__link {
+    padding-inline: 1rem;
+  }
+
+  .dropdown__submenu {
+    position: absolute;
+    left: 100%;
+    top: .5rem;
+  }
+
+  /* Show dropdown menu */
+  .dropdown__item:hover .dropdown__menu {
+    opacity: 1;
+    top: 5.5rem;
+    pointer-events: initial;
+    transition: top .3s;
+    background-color: #fff;
+    color: black;
+  }
+
+  /* Show dropdown submenu */
+  .dropdown__subitem:hover > .dropdown__submenu {
+    opacity: 1;
+    top: 0;
+    pointer-events: initial;
+    transition: top .3s;
+    background-color: #fff;
+    color: black;
+  }
+  .buttons{
+    margin-bottom: 2px;
+  }
+}
+.login-btn,
+.demo-btn {
+  background-color: #007BFF; /* Blue */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  margin-left: 20px;
+  transition: background-color 0.3s ease; /* Smooth transition */
+  font-weight: initial;
+  font-size: 1.0rem;
+}
+
+.login-btn:hover,
+.demo-btn:hover {
+  background-color: #100841; /* Darker Blue on Hover */
+  cursor: pointer;
+}
+.buttons {
+  display: flex;
+  align-items: center;
+  padding-top: 22px;
+  margin-left: 10px;
+  
+}
+.buttons a {
+  display: block;
+  margin-bottom: 10px; /* Add some spacing between buttons */
+}
+.banner {
+  background-image: url(images/banner5.avif);
+  /* background-color:#f0f8ff; Set the background color to light sky blue */
+  text-align: center; /* Center align all content in the banner */
+  padding: 40px;
+  margin-top: 20px; 
+  padding-left: 10px;/* Add padding for better spacing */
+}
+.banner-content {
+  display: flex;
+  align-items: center; /* Vertically center align content */
+  /* justify-content: center; Horizontally center align content */
+  flex-wrap: wrap;
+  padding-top: 50px; /* Adjust the top padding */
+  padding-left: 10px; /* Adjust the left padding */
+  padding-right: 20px; /* Adjust the right padding */ /* Allow content to wrap to next line if needed */
+}
+
+.content-text {
+  width: 100%;
+  max-width: 650px; /* Adjust the maximum width of the text content */
+  text-align: left; /* Align text content to the left */
+  padding: 0 20px; /* Add some padding for better spacing */
+  margin-bottom: 20px;
+  margin-right: 100px; /* Add margin at the bottom to separate from the stats */
+  animation: moveLefttoRight 1s ease-in-out forwards;
+
+}
+@keyframes moveLefttoRight{
+  0% {
+      transform: translateX(-100%);
+  }
+  100% {
+      transform: translateX(0);
+  }
+}
+
+.content-image {
+  width: 100%;
+  max-width: 400px; /* Adjust the maximum width of the image */
+  text-align: center; /* Center align the image */
+  padding: 0 20px; /* Add some padding for better spacing */
+  margin-bottom: 20px; /* Add margin at the bottom to separate from the stats */
+  animation: moveRighttoLeft 1s ease-in-out forwards;
+  
+}
+@keyframes moveRighttoLeft{
+  0% {
+      transform: translateX(100%);
+  }
+  100% {
+      transform: translateX(0);
+  }
+}
+
+
+.content-image img {
+  max-width: 100%; /* Ensure the image doesn't exceed its container */
+  height: auto; /* Maintain the aspect ratio of the image */
+  animation: moveUpDown 2s ease-in-out infinite alternate;
+}
+@keyframes moveUpDown {
+  0% {
+      transform: translateY(-10px); /* Move up */
+  }
+  100% {
+      transform: translateY(10px); /* Move down */
+  }
+}
+
+.banner h1 {
+  color:#eb3c3c; /* Blue */
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.banner p {
+  color: #370e0e; /* Dark Grey */
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.stats {
+  display: flex;
+  gap: 10px;
+  margin-top: 22px;
+  justify-content: left;
+}
+
+.stats-item {
+  
+  text-align: center;
+  border-right: 2px solid rgb(109, 55, 55);
+  padding-right: 6px;
+}
+.stats-item1{
+  text-align: center;
+
+}
+
+.stats-item span {
+  color: #007BFF; /* Blue */
+  font-weight: bold;
+
+}
+
+.stats-item p {
+  color: #333; /* Dark Grey */
+  margin-top: 5px;
+}
+
+.demo-btn {
+  background-color: #007BFF; /* Blue */
+}
+@media only screen and (max-width: 767px){
+  .content-text {
+    margin-right: 0px;
+    max-width: 400px;
+    
+
+  }
+  .banner-content{
+    padding-left: 0px;
+    padding-top: 0px;
+
+  }
+  .banner {
+    background-size: cover; /* Adjust background size for tablets */
+    background-position: center;
+    padding: 0px;
+    padding-top: 50px;
+    padding-bottom: 20px; /* Center the background image */
+  }
+  .banner h1{
+    font-size: 25px;
+  }
+  
+  
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .banner-content {
+    display: flex; /* Use flexbox */
+    justify-content: center; /* Horizontally center align content */
+    align-items: center; /* Vertically center align content */
+    padding-top: 10px; /* Adjust the top padding */
+    padding-left: 20px; /* Adjust the left padding */
+    padding-right: 20px;
+    gap:10px /* Adjust the right padding */
+  }
+  .banner h1{
+    font-size: 24px;
+  }
+  .banner p{
+    font-size: 18px;
+  }
+
+  .content-text {
+    flex: 1; /* Let the text content take up available space */
+    max-width: 50%; /* Adjust maximum width as needed */
+    text-align: left; /* Align text content to the left */
+    margin-right: 20px; /* Add margin to separate from image */
+  }
+
+  .content-image {
+    flex: 1; /* Let the image take up available space */
+    max-width: 50%; /* Adjust maximum width as needed */
+    text-align: center; /* Center align the image */
+  }
+    .banner {
+      background-size: cover; /* Adjust background size for tablets */
+      background-position: center; /* Center the background image */
+      padding: 3px;
+      padding-top: 50px;
+      padding-bottom: 20px;
+    }
+}
+.wrapper {
+  width: 90%;
+  max-width: 1536px;
+  margin-inline: auto;
+  position: relative;
+  height: 100px;
+  margin-top: 1rem;
+  margin-bottom: 5rem;
+  overflow: hidden;
+  mask-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 1) 20%,
+    rgba(0, 0, 0, 1) 80%,
+    rgba(0, 0, 0, 0)
+  );
+}
+
+@keyframes scrollLeft {
+  to {
+    left: -200px;
+  }
+}
+
+.item {
+  width: 200px;
+  height: 100px;
+  background-color:#fff;
+  border-radius: 6px;
+  position: absolute;
+  left: max(calc(200px * 8), 100%);
+  animation-name: scrollLeft;
+  animation-duration: 30s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.item1 {
+  animation-delay: calc(30s / 8 * (8 - 1) * -1);
+}
+
+.item2 {
+  animation-delay: calc(30s / 8 * (8 - 2) * -1);
+}
+
+.item3 {
+  animation-delay: calc(30s / 8 * (8 - 3) * -1);
+}
+
+.item4 {
+  animation-delay: calc(30s / 8 * (8 - 4) * -1);
+}
+
+.item5 {
+  animation-delay: calc(30s / 8 * (8 - 5) * -1);
+}
+
+.item6 {
+  animation-delay: calc(30s / 8 * (8 - 6) * -1);
+}
+
+.item7 {
+  animation-delay: calc(30s / 8 * (8 - 7) * -1);
+}
+
+.item8 {
+  animation-delay: calc(30s / 8 * (8 - 8) * -1);
+}
+
+.container1 {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px; /* Gap between cards */
+  padding: 20px; /* Overall padding */
+  padding-top: 40px; /* Top padding */
+  padding-bottom: 40px; /* Bottom padding */
+  margin-bottom: 60px; /* Bottom margin */
+  background-color: #f0f8ff;
+}
+
+
+.card {
+  background-color: white;
+  padding: 20px; /* Inner padding of the card */
+  border: 1px solid rgb(208, 208, 248); /* Border */
+  border-radius: 10px; /* Border radius */
+  box-shadow: 2px 2px 8px 2px rgb(208, 208, 248); /* Box shadow */
+  flex: 1 0 100%; /* Each card takes up full width by default */
+  max-width: 300px; /* Maximum width of each card */
+  max-height: 200px; /* Maximum height of each card */
+}
+
+.card:hover {
+  transform: translateY(-15px);
+}
+
+
+.title {
+  font-size: 25px; /* Font size */
+  font-weight: bold; /* Font weight */
+  color:#607608; /* Title color */
+}
+
+
+.description {
+  margin-top: 10px; /* Top margin for description */
+  color: #252107; /* Description color */
+}
+
+
+@media (min-width: 768px) {
+  .container1 {
+      padding: 20px; /* Overall padding */
+      padding-top: 40px; /* Top padding */
+      padding-bottom: 40px; /* Bottom padding */
+  }
+
+
+  .card {
+      flex: 1 0 calc(33.33% - 20px); /* Three cards per row on desktop devices */
+      margin-bottom: 0; /* Remove bottom margin for desktop devices */
+  }
+}
+
+
+@media (min-width: 1200px) {
+  .card {
+      flex: 1 0 calc(33.33% - 20px); /* Three cards per row on large desktop devices */
+  }
+}
+
+
+@media (max-width: 767px) {
+  .container1 {
+      display: none;
+  }
+}
+
+
+.slideshow-container1 {
+  display: none;
+}
+
+
+.card1 {
+  background-color: white; /* Background gradient */
+  padding: 20px; /* Inner padding of the card */
+  border: 1px solid rgb(208, 208, 248); /* Border */
+  border-radius: 5px; /* Border radius */
+  box-shadow: 2px 2px 8px 2px rgb(208, 208, 248); /* Box shadow */
+  max-width: 340px; /* Maximum width of each card */
+  max-height: 180px; /* Maximum height of each card */
+  margin: 0 auto; /* Center align the cards */
+  margin-bottom: 20px; /* Bottom margin between cards */
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+
+.title1 {
+  font-size: 25px; /* Font size */
+  font-weight: bold; /* Font weight */
+  color:#607608 ; /* Title color */
+}
+
+
+.description1 {
+  margin-top: 10px; /* Top margin for description */
+  color: #252107; /* Description color */
+}
+
+
+@media (max-width: 767px) {
+  .slideshow-container1 {
+      max-width: 400px;
+      position: relative;
+      margin: auto;
+      overflow: hidden;
+      border-radius: 5px;
+      display: block;
+      background-color:#f0f8ff ;
+  }
+
+
+  .slideshow-container1 .card1 {
+      display: none;
+  }
+
+
+  .slideshow-container1 .card1.active {
+      display: block;
+  }
+
+
+  .prev1, .next1 {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      margin-top: -30px;
+      padding: 16px;
+      color: black;
+      font-weight: bold;
+      font-size: 20px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+  }
+
+
+  .prev1 {
+      left: 0;
+      border-radius: 3px 0 0 3px;
+  }
+
+
+  .next1 {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+  }
+
+
+  
+
+
+  
+}
+.dots-container {
+      text-align: center;
+      margin-top: 10px;
+  }
+
+
+  .dot1 {
+      height: 10px;
+      width: 10px;
+      margin: 0 8px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.6s ease;
+  }
+
+
+  .active-dot {
+      background-color: #131212;
+  }
+
+.banner2section{
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.banner2 {
+  position: relative;
+  overflow: hidden;
+  width: 700px; /* Set width to 800px */
+  height: 80vh; /* Set height to 80vh */
+  background-image: url(images/banner6.jpg); /* Background image */
+  /* margin: auto; */
+  border-radius: 5px; /* Add border radius */
+  background-size: cover; /* Adjust background size */
+  background-position: center; /* Center the background image */
+  background-repeat: no-repeat; /* Prevent background image from repeating */
+}
+
+.stats1 {
+  position: absolute;
+  top: 54%;
+  left: 64%;
+  transform: translate(-50%, -50%);
+  width: 90%; /* Adjust width for better responsiveness */
+  text-align: center;
+}
+
+.stat1 {
+  background-color: gold; /* White background color for stats */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  margin: 10px auto; /* Center the stats horizontally */
+  width: calc(33.33% - 20px); /* Adjust width for three stats per row */
+  display: inline-block;
+  vertical-align: top;
+}
+@media only screen and (min-width: 768px) and (max-width: 1023px){
+   .banner2{
+    width: 600px;
+    height: 600px;
+   }
+}
+
+@media screen and (max-width: 768px) {
+  .banner2{
+    width: 400px;
+    height: 400px;
+   }
+  .stats1 {
+    width: 40%; /* Adjust width for better responsiveness on tablets */
+  }
+  .stat1 {
+    width: calc(50% - 20px);
+    font-size: 12px; /* Adjust width for two stats per row on tablets */
+    
+  }
+  
+}
+@media screen and (max-width: 480px){
+  .fum span{
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .stat1 {
+    width: calc(100% - 20px);
+    left: 45%; /* Adjust width for one stat per row on mobile */
+  }
+
+}
+
+.content-image2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+
+
+@keyframes rotateStat1 {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg) translateY(-150px);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg) translateY(-150px);
+  }
+}
+
+.stat1:nth-child(1) {
+  animation: rotateStat1 10s linear infinite;
+}
+
+.stat1:nth-child(2) {
+  animation: rotateStat1 10s linear infinite reverse;
+}
+
+.stat1:nth-child(3) {
+  animation: rotateStat1 10s linear infinite alternate;
+}
+
+.stat1:nth-child(4) {
+  animation: rotateStat1 10s linear infinite alternate-reverse;
+}
+
+.stat1:nth-child(5) {
+  animation: rotateStat1 10s linear infinite alternate;
+}
+
+.stat1:nth-child(6) {
+  animation: rotateStat1 10s linear infinite reverse;
+}
+
+
+footer {
+  background-color: #121d42;
+  margin-top: 10px;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+.footer-content1 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center the content horizontally */
+  padding-left: 20px;
+  padding-bottom: 20px;
+  padding-top: 40px;
+}
+
+.footer-section {
+  flex: 1;
+  max-width: 20%; /* Adjust the width of each section */
+  padding: 0 10px; /* Add some padding between sections */
+  box-sizing: border-box; /* Include padding and border in the width */
+  padding-left: 20px;
+  
+}
+
+.footer-section h3 {
+  color: #E5E5E5; /* Text color */
+  margin-bottom: 10px; /* Add margin at the bottom */
+}
+
+.footer-section h3::after {
+  content: ''; /* Add pseudo-element for border-bottom */
+  display: block;
+  border-bottom: 1px solid white; /* Adjust border-bottom style */
+  margin-top: 5px; /* Adjust margin to position border */
+  width: 50%; /* Adjust the width of the border */
+}
+.footer-section .fand::after {
+  content: ''; /* Add pseudo-element for border-bottom */
+  display: block;
+  border-bottom: 1px solid white; /* Adjust border-bottom style */
+  margin-top: 5px; /* Adjust margin to position border */
+  width: 70%; /* Adjust the width of the border */
+}
+
+.footer-section ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0; /* Remove default margin */
+  padding-bottom: 20px;
+  
+}
+
+.footer-section ul li {
+  margin-top: 19px;
+  font-weight: 400;
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.footer-section ul li a {
+  text-decoration: none;
+  color: #E5E5E5; /* Link color */
+  font-size: 13px;
+}
+
+.footer-section ul li a:hover {
+   color: #0c519b;
+  
+}
+
+.footerelmemts {
+  display: flex;
+  gap: 20px;
+  justify-content: center; /* Center the icons horizontally */
+}
+
+.footerelmemts li {
+  list-style-type: none;
+}
+
+.footer-under {
+  height: 50px;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center the content horizontally */
+  padding: 0 20px; /* Add padding to the sides */
+}
+
+.footer-under span a {
+  text-decoration: none;
+  color: #E5E5E5;
+  font-weight: 400;
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+}
+.footer-under ul{
+  padding-left: 20px;
+}
+.footer-under li{
+  color: white;
+}
+.footer-under li:hover{
+  color: #0c519b;
+}
+.footer-content2{
+  display: none;
+  
+}
+
+
+
+
+@media only screen and (max-width: 767px) {
+  footer{
+        display: none;
+    }
+    .footer-content2{
+      display: block;
+      background-color: #121d42;
+        margin-top: 10px;
+        overflow-x: hidden;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    .footer-section2 h3 {
+        color: #E5E5E5; /* Text color */
+        margin-bottom: 10px; /* Add margin at the bottom */
+        padding-left: 20px;
+        margin-bottom: 10px;
+        padding-top: 20px;
+      
+    }
+
+
+
+    .toggle-btn-container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+    }
+
+    .hr-section {
+        display: none;
+        /* max-height: 0;
+        overflow: hidden; */
+        /* transition: max-height 0.4s ease; */
+    }
+    .toggle-btn-container:hover .dropdown__arrow1 {
+        transform: rotate(180deg);
+      
+    }
+    .dropdown__arrow1 {
+        color: #E5E5E5;
+        font-size: 1.25rem;
+        font-weight: initial;
+        transition: transform 0.4s;
+        
+    }
+    .footer-section2 ul li {
+        margin-top: 13px;
+        font-weight: 400;
+        font-size: 10px;
+        font-family: 'Poppins', sans-serif;
+    }
+    .footer-section2 ul li a {
+        text-decoration: none;
+        color: #E5E5E5; /* Link color */
+        font-size: 13px;
+        padding-left: 40px;
+    }
+    .footer-section2 ul {
+        list-style-type: none;
+        padding: 0px;
+        margin-bottom: 20px; /* Remove default margin */
+        
+    }
+    .footer-under2 span a {
+      font-size: 14px; /* Adjust font size */
+      color: #E5E5E5;
+      text-decoration: none;
+      justify-content: center;
+
+    }
+    .footer-under2{
+      padding-top: 20px;
+      
+    }
+    .footer-under2 span{
+      padding-left: 90px;
+      
+    }
+    .footerelmemts2{
+      color: white;
+      justify-content: center;
+    }
+    
+    
+
+}
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .footer-content1 {
+      padding-left: 20px; /* Adjust left padding */
+      padding-bottom: 20px; /* Keep the same bottom padding */
+  }
+
+  .footer-section {
+      max-width: 50%; /* Adjust the width of each section */
+      padding-left: 10px; /* Adjust left padding */
+  }
+
+  .footer-section h3::after {
+      width: 70%; /* Adjust the width of the border */
+  }
+
+  .footer-section ul li {
+      margin-top: 16px; /* Adjust margin-top */
+      font-size: 14px; /* Adjust font size */
+  }
+
+  .footerelmemts {
+      gap: 15px; /* Adjust the gap between icons */
+  }
+
+  .footer-under {
+      padding: 0 10px; /* Adjust padding */
+  }
+
+  .footer-under span a {
+      font-size: 14px; /* Adjust font size */
+  }
+}

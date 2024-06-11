@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+   <html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+      <!--=============== REMIXICONS ===============-->
+      <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+      <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+      <!--=============== CSS ===============-->
+      <link rel="stylesheet" href="styles.css">
+
+      <title>Responsive dropdown menu - Bedimcode</title>
+   </head>
+   <body>
+      <!--=============== HEADER ===============-->
+      <header class="header">
+         <nav class="nav container">
+            <div class="nav__data">
+               <a href="#" class="nav__logo">
+                  <img height="32" width="32"  src="yuque-fill.svg" /> Company
+               </a>
+               
+               <div class="nav__toggle" id="nav-toggle">
+                  <i class="ri-menu-line nav__burger"></i>
+                  <i class="ri-close-line nav__close"></i>
+               </div>
+            </div>
+
+            <!--=============== NAV MENU ===============-->
+            <div class="nav__menu" id="nav-menu">
+               <ul class="nav__list">
+                  <!--=============== DROPDOWN 1 ===============-->
+                  <li class="dropdown__item">
+                     <div class="nav__link">
+                        Product <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                     </div>
+
+                     <ul class="dropdown__menu">
+                        <!--=============== DROPDOWN SUBMENU ===============-->
+                        <li class="dropdown__subitem">
+                           <div class="dropdown__link">
+                              <i class="ri-creative-commons-by-fill"></i></i> HR <i class="ri-add-line dropdown__add"></i>
+                           </div>
+
+                           <ul class="dropdown__submenu">
+                              <li>
+                                 <a href="#" class="dropdown__sublink">
+                                    <i class="ri-file-list-line"></i> Employee Management
+                                 </a>
+                              </li>
+      
+                              <li>
+                                 <a href="#" class="dropdown__sublink">
+                                    <i class="ri-cash-line"></i> Time & Attandance
+                                 </a>
+                              </li>
+      
+                              <li>
+                                 <a href="#" class="dropdown__sublink">
+                                    <i class="ri-refund-2-line"></i>Policy Management
+                                 </a>
+                              </li>
+                           </ul>
+                        </li>
+                        <li class="dropdown__subitem">
+                           <div class="dropdown__link">
+                              <i class="ri-bar-chart-line"></i> Performance <i class="ri-add-line dropdown__add"></i>
+                           </div>
+
+                           <ul class="dropdown__submenu">
+                              <li>
+                                 <a href="#" class="dropdown__sublink">
+                                    <i class="ri-file-list-line"></i> Review
+                                 </a>
+                              </li>
+      
+                              <li>
+                                 <a href="#" class="dropdown__sublink">
+                                    <i class="ri-cash-line"></i> Objectives
+                                 </a>
+                              </li>
+      
+                              <li>
+                                 <a href="#" class="dropdown__sublink">
+                                    <i class="ri-refund-2-line"></i> Feedback
+                                 </a>
+                              </li>
+                           </ul>
+                        </li>
+                        <li class="dropdown__subitem">
+                           <div class="dropdown__link">
+                              <i class="ri-user-received-2-fill"></i>Recruit<i class="ri-add-line dropdown__add"></i>
+                           </div>
+
+                           <ul class="dropdown__submenu">
+                              <li>
+                                 <a href="#" class="dropdown__sublink">
+                                    <i class="ri-file-list-line"></i>Payroll Automation
+                                 </a>
+                              </li>
+      
+                              <li>
+                                 <a href="#" class="dropdown__sublink">
+                                    <i class="ri-cash-line"></i> Statutory Compliance
+                                 </a>
+                              </li>
+      
+                              <li>
+                                 <a href="#" class="dropdown__sublink">
+                                    <i class="ri-refund-2-line"></i> Overtime & Incentives
+                                 </a>
+                              </li>
+                           </ul>
+                        </li>
+                        <li class="dropdown__subitem">
+                           <div class="dropdown__link">
+                              <i class="ri-secure-payment-line"></i> Payroll <i class="ri-add-line dropdown__add"></i>
+                           </div>
+
+                           <ul class="dropdown__submenu">
+                              <li>
+                                 <a href="#" class="dropdown__sublink">
+                                    <i class="ri-file-list-line"></i> Tribe
+                                 </a>
+                              </li>
+      
+                              <li>
+                                 <a href="#" class="dropdown__sublink">
+                                    <i class="ri-cash-line"></i> Feed
+                                 </a>
+                              </li>
+      
+                              <li>
+                                 <a href="#" class="dropdown__sublink">
+                                    <i class="ri-refund-2-line"></i> Surveys
+                                 </a>
+                              </li>
+                           </ul>
+                        </li>
+                        <li class="dropdown__subitem">
+                           <div class="dropdown__link">
+                              <i class="ri-survey-line"></i> Engage <i class="ri-add-line dropdown__add"></i>
+                           </div>
+
+                           <ul class="dropdown__submenu">
+                              <li>
+                                 <a href="#" class="dropdown__sublink">
+                                    <i class="ri-file-list-line"></i> Candidate Management
+                                 </a>
+                              </li>
+      
+                              <li>
+                                 <a href="#" class="dropdown__sublink">
+                                    <i class="ri-cash-line"></i> Request Management
+                                 </a>
+                              </li>
+      
+                              <li>
+                                 <a href="#" class="dropdown__sublink">
+                                    <i class="ri-refund-2-line"></i> Applicant Tracking System
+                                 </a>
+                              </li>
+                           </ul>
+                        </li>
+                     </ul>
+                  </li>
+                  
+                  <li class="dropdown__item">
+                     <div class="nav__link">
+                        Customers <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                     </div>
+
+                     <ul class="dropdown__menu">
+                        <li>
+                           <a href="#" class="dropdown__link">
+                              <i class="ri-user-line"></i>Customers Success
+                           </a>                          
+                        </li>
+
+                        <li>
+                           <a href="#" class="dropdown__link">
+                              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" id="Customer-Relationship-Management-Lead-Management-1--Streamline-Ultimate" height="24" width="24"><desc>Customer Relationship Management Lead Management 1 Streamline Icon: https://streamlinehq.com</desc><path stroke="#000000" stroke-linecap="round" stroke-linejoin="round" d="M2.01001 5.10203c0 0.57923 0.2301 1.13474 0.63968 1.54432 0.40958 0.40958 0.96509 0.63968 1.54432 0.63968 0.57923 0 1.13474 -0.2301 1.54432 -0.63968 0.40958 -0.40958 0.63968 -0.96509 0.63968 -1.54432 0 -0.57923 -0.2301 -1.13474 -0.63968 -1.54432 -0.40958 -0.40958 -0.96509 -0.63968 -1.54432 -0.63968 -0.57923 0 -1.13474 0.2301 -1.54432 0.63968 -0.40958 0.40958 -0.63968 0.96509 -0.63968 1.54432Z" stroke-width="1.5"></path><path stroke="#000000" stroke-linecap="round" stroke-linejoin="round" d="M7.63801 10.184c-0.22014 -0.51599 -0.55345 -0.97588 -0.97527 -1.34569 -0.42182 -0.3698 -0.92138 -0.64007 -1.46172 -0.7908 -0.54034 -0.15074 -1.10766 -0.17809 -1.65999 -0.08004 -0.55234 0.09805 -1.07558 0.31901 -1.53102 0.64652" stroke-width="1.5"></path><path stroke="#000000" stroke-linecap="round" stroke-linejoin="round" d="M17.6219 5.10203c0 0.57923 0.2301 1.13474 0.6397 1.54432 0.4096 0.40958 0.9651 0.63968 1.5443 0.63968 0.5793 0 1.1348 -0.2301 1.5444 -0.63968 0.4095 -0.40958 0.6396 -0.96509 0.6396 -1.54432 0 -0.57923 -0.2301 -1.13474 -0.6396 -1.54432 -0.4096 -0.40958 -0.9651 -0.63968 -1.5444 -0.63968 -0.5792 0 -1.1347 0.2301 -1.5443 0.63968 -0.4096 0.40958 -0.6397 0.96509 -0.6397 1.54432Z" stroke-width="1.5"></path><path stroke="#000000" stroke-linecap="round" stroke-linejoin="round" d="M16.3621 10.184c0.2201 -0.51599 0.5534 -0.97588 0.9752 -1.34569 0.4219 -0.3698 0.9214 -0.64007 1.4617 -0.7908 0.5404 -0.15074 1.1077 -0.17809 1.66 -0.08004 0.5524 0.09805 1.0756 0.31901 1.5311 0.64652" stroke-width="1.5"></path><path stroke="#000000" stroke-linecap="round" stroke-linejoin="round" d="M8.66296 4.087c0 0.43822 0.08632 0.87215 0.25402 1.27701 0.1677 0.40487 0.4135 0.77274 0.72337 1.08261 0.30987 0.30986 0.67775 0.55567 1.08255 0.72337 0.4049 0.1677 0.8388 0.25401 1.2771 0.25401 0.4382 0 0.8721 -0.08631 1.277 -0.25401 0.4048 -0.1677 0.7727 -0.41351 1.0826 -0.72337 0.3098 -0.30987 0.5556 -0.67774 0.7233 -1.08261 0.1677 -0.40486 0.2541 -0.83879 0.2541 -1.27701 0 -0.43822 -0.0864 -0.87215 -0.2541 -1.27701 -0.1677 -0.40487 -0.4135 -0.77274 -0.7233 -1.08261 -0.3099 -0.30986 -0.6778 -0.55567 -1.0826 -0.72337C12.8721 0.836314 12.4382 0.75 12 0.75c-0.4383 0 -0.8722 0.086314 -1.2771 0.25401 -0.4048 0.1677 -0.77268 0.41351 -1.08255 0.72337 -0.30987 0.30987 -0.55567 0.67774 -0.72337 1.08261 -0.1677 0.40486 -0.25402 0.83879 -0.25402 1.27701Z" stroke-width="1.5"></path><path stroke="#000000" stroke-linecap="round" stroke-linejoin="round" d="M17.7731 11.46c-0.7316 -0.8038 -1.623 -1.446 -2.6171 -1.88545 -0.9941 -0.43943 -2.0691 -0.66641 -3.1559 -0.66641 -1.0869 0 -2.16187 0.22698 -3.15598 0.66641 -0.9941 0.43945 -1.88549 1.08165 -2.61707 1.88545" stroke-width="1.5"></path><path stroke="#000000" stroke-linecap="round" stroke-linejoin="round" d="M15.9549 13.856c-0.0165 1.0382 -0.4405 2.0283 -1.1805 2.7566 -0.74 0.7283 -1.7367 1.1365 -2.775 1.1365s-2.03494 -0.4082 -2.77494 -1.1365c-0.74001 -0.7283 -1.16401 -1.7184 -1.18051 -2.7566" stroke-width="1.5"></path><path stroke="#000000" stroke-linecap="round" stroke-linejoin="round" d="M21.394 13.852v1.487l-1.7 0.34c-0.1962 0.8242 -0.5248 1.6111 -0.973 2.33l0.969 1.444 -2.1 2.1 -1.443 -0.969c-0.7191 0.4521 -1.5076 0.7829 -2.334 0.979l-0.336 1.691h-2.96l-0.337 -1.691c-0.82609 -0.1963 -1.61427 -0.527 -2.33303 -0.979l-1.447 0.965 -2.1 -2.1 0.969 -1.444c-0.44855 -0.7189 -0.77749 -1.5058 -0.974 -2.33l-1.7 -0.34v-1.483" stroke-width="1.5"></path></svg>Customers Support
+                           </a>
+                        </li>
+
+                        
+                     </ul>
+                  </li>
+
+                  <!--=============== DROPDOWN 2 ===============-->
+                  <li class="dropdown__item">
+                     <div class="nav__link">
+                        Resouses <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                     </div>
+
+                     <ul class="dropdown__menu">
+                        <li>
+                           <a href="#" class="dropdown__link">
+                              <i class="ri-user-line"></i> Profiles
+                           </a>                          
+                        </li>
+
+                        <li>
+                           <a href="#" class="dropdown__link">
+                              <i class="ri-lock-line"></i> Accounts
+                           </a>
+                        </li>
+
+                        <li>
+                           <a href="#" class="dropdown__link">
+                              <i class="ri-message-3-line"></i> Messages
+                           </a>
+                        </li>
+                     </ul>
+                  </li>
+
+                  <li><a href="#" class="nav__link">pricing</a></li>
+                  <li>
+                     <div class="buttons">
+                        <a href="#" class="login-btn">Login</a>
+                        <a href="#" class="demo-btn">Schedule Demo</a>
+                    </div>
+                  </li>
+               </ul>
+            </div>
+         </nav>
+      </header>
+      <!-- banner section start -->
+      <section class="banner" id="banner">
+         <div class="banner-content">
+             <div class="content-text">
+                 <h1><span style="color:#007BFF;">Unlock the full potential of your workforce</span> with our integrated AI-driven HR platform</h1>
+                 <p style="color: black;font-weight: 600;margin-left: 8px;">#1 HR Software for Small & Medium Business (0 Users)</p>
+                 <div class="stats" >
+                   <div class="stats-item">
+                       <span>Customers</span>
+                       <p>0 +</p>
+                   </div>
+                   <div class="stats-item">
+                       <span>Users</span>
+                       <p>0+</p>
+                   </div>
+                   <div class="stats-item">
+                       <span>Countries</span>
+                       <p>0 +</p>
+                   </div>
+                 </div>
+                 <div class="stats">
+                   <div class="stats-item1" style="display: flex; gap: 15px;">
+                       <div style="color: rgb(135, 135, 56); display: flex;gap: 5px;">
+                           <i class='bx bx-star'></i>
+                           <i class='bx bx-star'></i>
+                           <i class='bx bx-star'></i>
+                           <i class='bx bx-star'></i>
+                           <i class='bx bx-star'></i> 
+                       </div>
+                     <span>0+ average ratings on global review platforms</span>
+                   </div>
+                 </div>
+             </div>
+             <div class="content-image">
+                 <img src="images/cmp_images/HRMS.jpg" alt="Image description" width="275" height="275">
+             </div>
+             
+         </div>
+          
+         <button style="background-color: #013c5a; margin-top: 40px; border:0px; padding:5px 18px; font-size: 22px; border-radius: 3px; color: aliceblue;" class="mt-3">Schedule a Demo</button>
+     </section>
+     <!-- banner section end -->
+     <!-- oldcompines start -->
+    <div style="text-align: center;margin-top: 1rem;">
+      <p class="fun">WE WORK WITH WORLD'S TOP COMPANIES</p>
+      <div class="wrapper">
+          <div class="item item1"><img src="images/cmp_images/img3.svg"  height="100vh" width="100vh"></div>
+          <div class="item item2"><img src="images/cmp_images/img2.svg"></div>
+          <div class="item item3"><img src="images/cmp_images/img1.svg"></div>
+          <div class="item item4"><img src="images/cmp_images/img4.svg" ></div>
+          <div class="item item5"><img src="images/cmp_images/img5.svg" ></div>
+          <div class="item item6"><img src="images/cmp_images/img8.svg" ></div>
+          <div class="item item7"><img src="images/cmp_images/img7.svg" ></div>
+          <div class="item item8"><img src="images/cmp_images/img9.svg" ></div>
+      </div>
+  </div>
+
+
+  <!-- oldcompines end -->
+  <div class="fum">
+   <h1 style="text-align: center; font-weight:575;" >Empowering Success Across <span style="background-color: rgb(138, 153, 187); padding: 0px 8px; border-radius: 8px; font-weight: 800; color:white;">Industries</span></h1>
+   <p style="text-align: center; font-size: 18px;" >HR Solutions, tailored for diverse industries,fostering a culture of continuous growth</p>    
+  </div>
+  <br>
+  <div class="container1">
+   <div class="card">
+       <h1 class="title">IT & SaaS</h1>
+       <p class="description">In the tech realm, our HCM system pioneers the way, enhancing recruitment, skill development, and employee engagement for a thriving, innovative workforce.</p>
+   </div>
+   <div class="card">
+       <h1 class="title">Manufacturing</h1>
+       <p class="description">Propel manufacturing into the future with our HCM technology, synchronizing workforce planning and performance to meet production demands with precision.</p>
+   </div>
+   <div class="card">
+       <h1 class="title">Education</h1>
+       <p class="description">Transform education HR practices with our visionary HCM, promoting staff development and student success through streamlined administrative processes.</p>
+   </div>
+   <div class="card">
+       <h1 class="title">Logistics</h1>
+       <p class="description">Navigate supply chain complexities effortlessly with our advanced HCM system, harmonizing workforce planning & performance for unmatched excellence.</p>
+   </div>
+   <div class="card">
+       <h1 class="title">BFSI</h1>
+       <p class="description">Navigate the complexities of finance effortlessly with our HCM solutions, integrating compliance, talent acquisition, and development for sustained success.</p>
+   </div>
+   <div class="card">
+       <h1 class="title">Automotive</h1>
+       <p class="description">Optimize talent acquisition, workforce management, and compliance, essential for reducing costs, and maintaining competitiveness in the automotive industry.</p>
+   </div>
+</div>
+
+
+<div class="slideshow-container1">
+   <div class="card1 active">
+       <h1 class="title1">IT & SaaS</h1>
+       <p class="description1">In the tech realm, our HCM system pioneers the way, enhancing recruitment, skill development, and employee engagement for a thriving, innovative workforce.</p>
+   </div>
+   
+   <div class="card1">
+       <h1 class="title1">Manufacturing</h1>
+       <p class="description1">Propel manufacturing into the future with our HCM technology, synchronizing workforce planning and performance to meet production demands with precision.</p>
+   </div>
+   
+   <div class="card1">
+       <h1 class="title1">Education</h1>
+       <p class="description1">Transform education HR practices with our visionary HCM, promoting staff development and student success through streamlined administrative processes.</p>
+   </div>
+   <div class="card1">
+       <h1 class="title1">Logistics</h1>
+       <p class="description1">Navigate supply chain complexities effortlessly with our advanced HCM system, harmonizing workforce planning & performance for unmatched excellence.</p>
+   </div>
+   <div class="card1">
+       <h1 class="title1">BFSI</h1>
+       <p class="description1">Navigate the complexities of finance effortlessly with our HCM solutions, integrating compliance, talent acquisition, and development for sustained success.</p>
+   </div>
+   <div class="card1">
+       <h1 class="title1">Automotive</h1>
+       <p class="description1">Optimize talent acquisition, workforce management, and compliance, essential for reducing costs, and maintaining competitiveness in the automotive industry.</p>
+   </div>
+   
+   <div class="dots-container">
+       <span class="dot1 active-dot" onclick="currentSlide1(1)"></span>
+       <span class="dot1" onclick="currentSlide1(2)"></span>
+       <span class="dot1" onclick="currentSlide1(3)"></span>
+       <span class="dot1" onclick="currentSlide1(4)"></span>
+       <span class="dot1" onclick="currentSlide1(5)"></span>
+       <span class="dot1" onclick="currentSlide1(6)"></span>
+   </div>
+
+
+   <a class="prev1" onclick="plusSlides1(-1)">&#10094;</a>
+   <a class="next1" onclick="plusSlides1(1)">&#10095;</a>
+</div>
+    <!-- banner2section  start-->
+    <section class="banner2section">
+      <div class="banner2">
+         <div style="display: flex;justify-content: center;">
+             <h1 style="color: darkblue;font-size: 32px;font-weight: 1000;">End-to-end <span style="color: white;">for workforce challenges</span> </h1>
+         </div>
+         <div class="content-image2">
+           <img src="images/cmp_images/HRMS.jpg" alt="Image description">
+     
+         </div>
+         <div class="stats1">
+           <div class="stat1">
+             <h5>Shift & Roster management for the workforce</h5>
+           </div>
+           <div class="stat1">
+             <h5>Biometric integration for data flow</h5>
+           </div>
+           <div class="stat1">
+             <h5>Geo-fenced attendance marking</h5>
+           </div>
+           <div class="stat1">
+             <h5>Custom Reports at one place</h5>
+           </div>
+           <div class="stat1">
+             <h5>Statutory compliances Field</h5>
+           </div>
+           <div class="stat1">
+             <h5>Employee tracking</h5>
+           </div>
+         </div>
+      </div>
+ 
+      </div>
+   </section>
+  <!-- banner2section end -->
+  <!-- footer section start -->
+     <!-- Your content goes here -->
+     <footer>
+      <div class="footer-content1">
+          <div class="footer-section">
+              <div ><h3>HR</h3></div>
+              <ul>
+                  <li><a href="#">Employee Management</a></li>
+                  <li><a href="#">Time & Attendance</a></li>
+                  <li><a href="#">Leave Management</a></li>
+                  <li><a href="#">Employee Self Service</a></li>
+                  <li><a href="#">Employee Onboarding</a></li>
+                  <li><a href="#">Employee Offboarding</a></li>
+                  <li><a href="#">Expense Management</a></li>
+                  <li><a href="#">Asset Management</a></li>
+                  <li><a href="#">Document Management</a></li>
+                  <li><a href="#">Helpdesk Management</a></li>
+                  <li><a href="#">Policy Management</a></li>
+                  <li><a href="#">Workflow Management</a></li>
+                  <li><a href="#">Timesheet Management</a></li>
+                  <li><a href="#">Travel Desk</a></li>
+              </ul> 
+          </div>
+          <div class="footer-section">
+              
+                  <div ><h3>PAYROLL</h3></div>
+                  <ul>
+                      <li><a href="#">Payroll Automation</a></li>
+                      <li><a href="#">Statutory Compliance</a></li>
+                      <li><a href="#">Overtime & Incentives</a></li>
+                  </ul>
+              
+              
+                  <div ><h3>RECRUIT</h3></div>
+                  <ul>
+                      <li><a href="#">Candidate Management</a></li>
+                      <li><a href="#">Requisition Management</a></li>
+                      <li><a href="#">Applicant Tracking System</a></li>
+                  </ul>
+                  <div><h3>CUSTOMERS</h3></div>
+                  <ul>
+                      <li><a href="#">Customer Story</a></li>
+                      <li><a href="#">Customer Support</a></li>
+                      <li><a href="#">Customer Onboarding</a></li>
+                      <li><a href="#">Webinars</a></li>
+                  </ul>
+              
+          </div>
+          <div class="footer-section">
+                    <div ><h3 class="fand">PERFORMANCE</h3></div>
+                    <ul>
+                        <li><a href="#">Reviews(KRA/KPI)</a></li>
+                        <li><a href="#">Objectives(OKR)</a></li>
+                        <li><a href="#">Feedback</a></li>
+                        <li><a href="#">Compensation</a></li>
+                    </ul>
+                   
+                    <div ><h3>ABOUT</h3></div>
+                    <ul>
+                        <li><a href="#">Story</a></li>
+                        <li><a href="#">Investors</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Coverage</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+
+          </div>
+          <div class="footer-section">
+              <div><h3>RESOURSES</h3></div>
+              <ul>
+                  <li><a href="#">Blogs</a></li>
+                  <li><a href="#">Calculators</a></li>
+                  <li><a href="#">Glossary</a></li>
+                  <li><a href="#">Guides</a></li>
+                  <li><a href="#">Infographics</a></li>
+                  <li><a href="#">HR Checklist</a></li>
+                  <li><a href="#">HR Email Templates</a></li>
+                  <li><a href="#">HR Policy Templates</a></li>
+                  <li><a href="#">Job Descriptions</a></li>
+                  <li><a href="#">OKR Templates</a></li>
+              </ul>
+
+            </div>
+            <div class="footer-section">
+                  <div ><h3>INDUSTRY</h3></div>
+                  <ul>
+                      <li><a href="#">Automotive</a></li>
+                      <li><a href="#">Banking & Finance</a></li>
+                      <li><a href="#">Education</a></li>
+                      <li><a href="#">Logistics</a></li>
+                      <li><a href="#">Manfaturing</a></li>
+                      <li><a href="#">IT & SaaS</a></li>
+                  </ul>
+                   
+                    
+                      
+                    </div>
+
+            </div>
+            
+
+      </div>
+      <div class="footer-under">
+          <span><a href="">© 2024, All rights reserved</a></span>
+          <ul class="footerelmemts" style="display: flex;gap:10px;">
+              <li><i class='bx bxl-linkedin' style="font-size: 26px;"></i></box-icon></li>
+              <li><i class='bx bxl-instagram'  style="font-size: 26px;"></i></li>
+              <li><i class='bx bxl-facebook-circle'  style="font-size: 26px;"></i></li>
+              <li><i class='bx bxl-twitter'style="font-size: 26px;"></i></li>
+            </ul>
+        </div>
+
+   </footer>
+   <!-- another footer for mobile start -->
+   <div class="footer-content2"> 
+      <div class="footer-section2">
+          <div class="toggle-btn-container" id="toggleBtn" onclick="toggleHR('hr')">
+              <h3 class="toggle-btn">HR</h3>
+              <i class="ri-arrow-down-s-line dropdown__arrow1"></i>
+          </div>
+          <ul class="hr-section" id="hr">
+              <li><a href="#">Employee Management</a></li>
+              <li><a href="#">Time & Attendance</a></li>
+              <li><a href="#">Leave Management</a></li>
+              <li><a href="#">Employee Self Service</a></li>
+              <li><a href="#">Employee Onboarding</a></li>
+              <li><a href="#">Employee Offboarding</a></li>
+              <li><a href="#">Expense Management</a></li>
+              <li><a href="#">Asset Management</a></li>
+              <li><a href="#">Document Management</a></li>
+              <li><a href="#">Helpdesk Management</a></li>
+              <li><a href="#">Policy Management</a></li>
+              <li><a href="#">Workflow Management</a></li>
+              <li><a href="#">Timesheet Management</a></li>
+              <li><a href="#">Travel Desk</a></li>
+          </ul>
+      </div>
+      <div class="footer-section2">       
+          <div class="toggle-btn-container" id="toggleBtn1" onclick="toggleHR('hr1')">
+              <h3 class="toggle-btn">PAYROLL</h3>
+              <i class="ri-arrow-down-s-line dropdown__arrow1"></i>
+          </div>
+          <ul class="hr-section" id="hr1">
+              <li><a href="#">Payroll Automation</a></li>
+              <li><a href="#">Statutory Compliance</a></li>
+              <li><a href="#">Overtime & Incentives</a></li>
+          </ul>
+          <div class="toggle-btn-container" id="toggleBtn2" onclick="toggleHR('hr2')">
+              <h3>RECRUIT</h3>
+              <i class="ri-arrow-down-s-line dropdown__arrow1"></i>
+          </div>
+          <ul class="hr-section" id="hr2">
+              <li><a href="#">Candidate Management</a></li>
+              <li><a href="#">Requisition Management</a></li>
+              <li><a href="#">Applicant Tracking System</a></li>
+          </ul>
+          <div class="toggle-btn-container" id="toggleBtn3" onclick="toggleHR('hr3')">
+              <h3>CUSTOMERS</h3>
+              <i class="ri-arrow-down-s-line dropdown__arrow1"></i>
+          </div>
+          <ul class="hr-section" id="hr3">
+              <li><a href="#">Customer Story</a></li>
+              <li><a href="#">Customer Support</a></li>
+              <li><a href="#">Customer Onboarding</a></li>
+              <li><a href="#">Webinars</a></li>
+          </ul>
+      </div>
+      <div class="footer-section2">
+                  <div class="toggle-btn-container" id="toggleBtn2" onclick="toggleHR('hr4')" >
+                      <h3 class="fand">PERFORMANCE</h3>
+                      <i class="ri-arrow-down-s-line dropdown__arrow1"></i>
+                  </div>
+                  <ul class="hr-section" id="hr4">
+                      <li><a href="#">Reviews(KRA/KPI)</a></li>
+                      <li><a href="#">Objectives(OKR)</a></li>
+                      <li><a href="#">Feedback</a></li>
+                      <li><a href="#">Compensation</a></li>
+                  </ul>
+              
+                  <div class="toggle-btn-container" id="toggleBtn2" onclick="toggleHR('hr5')" >
+                      <h3>ABOUT</h3>
+                      <i class="ri-arrow-down-s-line dropdown__arrow1"></i>
+                  </div>
+                  <ul class="hr-section" id="hr5">
+                      <li><a href="#">Story</a></li>
+                      <li><a href="#">Investors</a></li>
+                      <li><a href="#">Careers</a></li>
+                      <li><a href="#">Coverage</a></li>
+                      <li><a href="#">Contact</a></li>
+                  </ul>
+  
+          </div>
+          <div class="footer-section2">
+          <div class="toggle-btn-container" id="toggleBtn2" onclick="toggleHR('hr6')">
+              <h3>RESOURSES</h3>
+              <i class="ri-arrow-down-s-line dropdown__arrow1"></i>
+          </div>
+          <ul class="hr-section" id="hr6">
+              <li><a href="#">Blogs</a></li>
+              <li><a href="#">Calculators</a></li>
+              <li><a href="#">Glossary</a></li>
+              <li><a href="#">Guides</a></li>
+              <li><a href="#">Infographics</a></li>
+              <li><a href="#">HR Checklist</a></li>
+              <li><a href="#">HR Email Templates</a></li>
+              <li><a href="#">HR Policy Templates</a></li>
+              <li><a href="#">Job Descriptions</a></li>
+              <li><a href="#">OKR Templates</a></li>
+          </ul>
+  
+          </div>
+          <div class="footer-section2">
+              <div class="toggle-btn-container" id="toggleBtn2" onclick="toggleHR('hr7')">
+                  <h3>INDUSTRY</h3>
+                  <i class="ri-arrow-down-s-line dropdown__arrow1"></i>
+              </div>
+              <ul class="hr-section" id="hr7">
+                  <li><a href="#">Automotive</a></li>
+                  <li><a href="#">Banking & Finance</a></li>
+                  <li><a href="#">Education</a></li>
+                  <li><a href="#">Logistics</a></li>
+                  <li><a href="#">Manfaturing</a></li>
+                  <li><a href="#">IT & SaaS</a></li>
+              </ul>
+
+              
+          </div>
+          <div class="footer-under2">
+              
+              <ul class="footerelmemts2" style="display: flex;gap:10px;">
+                  <li><i class='bx bxl-linkedin' style="font-size: 26px;"></i></box-icon></li>
+                  <li><i class='bx bxl-instagram'  style="font-size: 26px;"></i></li>
+                  <li><i class='bx bxl-facebook-circle'  style="font-size: 26px;"></i></li>
+                  <li><i class='bx bxl-twitter'style="font-size: 26px;"></i></li>
+              </ul>
+              <span><a href="">© 2024, All rights reserved</a></span>
+
+          </div>
+  
+
+  </div>
+    <!-- another footer for mobile End -->
+
+
+  <!-- footer section end -->
+
+
+      <!--=============== MAIN JS ===============-->
+      <script src="main.js"></script>
+      <script>
+        function toggleHR(id) {
+            var allSections = document.querySelectorAll('.hr-section');
+            var targetSection = document.getElementById(id);
+    
+            // Toggle the display of all sections
+            allSections.forEach(function(section) {
+                if (section === targetSection) {
+                    // Toggle the clicked section
+                    section.style.display = (section.style.display === 'none') ? 'block' : 'none';
+                } else {
+                    // Close all other sections
+                    section.style.display = 'none';
+                }
+            });
+        }
+     </script>
+   </body>
+</html>
